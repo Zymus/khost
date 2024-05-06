@@ -1,16 +1,13 @@
 plugins {
-    kotlin("jvm") version "1.9.23"
-    application
+    // this is necessary to avoid the plugins to be loaded multiple times
+    // in each subproject's classloader
+    alias(libs.plugins.kotlinMultiplatform)
 }
 
 repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation("com.github.ajalt.clikt:clikt:4.4.0")
-}
-
-application {
-    mainClass = "games.studiohummingbird.khost.MainKt"
+kotlin {
+    mingwX64()
 }
