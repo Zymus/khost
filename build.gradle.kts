@@ -1,13 +1,9 @@
 plugins {
-    // this is necessary to avoid the plugins to be loaded multiple times
-    // in each subproject's classloader
-    alias(libs.plugins.kotlinMultiplatform)
+    alias(libs.plugins.kotlinMultiplatform) apply false
 }
 
-repositories {
-    mavenCentral()
-}
-
-kotlin {
-    mingwX64()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
