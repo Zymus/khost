@@ -11,7 +11,7 @@ value class IPv4(
     init {
         val parts = address.split(".")
         require(parts.size == 4) { "IPv4 addresses have 4 parts: $address" }
-        require(parts.all { it.toUByteOrNull(10) != null }) { "IPv4 parts must be number in range 0..255: $address" }
+        require(parts.all { it.toUByteOrNull(10) != null }) { "IPv4 parts must be in range 0..255: $address" }
     }
 
     override fun toString(): String = address

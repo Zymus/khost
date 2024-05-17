@@ -1,5 +1,3 @@
 package games.studiohummingbird.khost.cli
 
-fun main(vararg args: String) {
-
-}
+expect suspend fun readHosts(): String

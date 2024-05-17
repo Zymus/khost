@@ -8,7 +8,7 @@ kotlin {
         browser {
             testTask {
                 useKarma {
-                    useFirefox()
+                    useFirefoxHeadless()
                 }
             }
         }
@@ -22,7 +22,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.kotlinx.serialization)
+            implementation(libs.kotlinx.serialization.core)
             implementation(libs.arrow.core)
             implementation(libs.arrow.core.serialization)
             implementation(libs.arrow.fx.coroutines)

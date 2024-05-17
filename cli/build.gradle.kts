@@ -3,8 +3,10 @@ plugins {
 }
 
 kotlin {
-    js {
+    js(IR) {
         nodejs()
+        useCommonJs()
+        binaries.executable()
     }
     jvm()
     linuxX64()
@@ -15,8 +17,15 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(project(":api"))
+            implementation(project(":serialization"))
             implementation(libs.arrow.core)
             implementation(libs.arrow.fx.coroutines)
+            implementation(libs.clikt)
+            implementation(libs.kotlinx.coroutines.core)
+        }
+
+        jsMain.dependencies {
+            implementation(libs.kotlin.wrappers.node)
         }
     }
 }

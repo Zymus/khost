@@ -1,15 +1,21 @@
 [versions]
 arrow = "1.2.4"
+clikt = "4.4.0"
 compose-plugin = "1.6.2"
 kotlin = "1.9.23"
-kotlinx-serialization = "1.6.3"
+kotlin-wrappers-node = "20.11.30-pre.748"
+kotlinx-coroutines-core = "1.8.1"
+kotlinx-serialization-core = "1.6.3"
 
 [libraries]
 arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrow" }
 arrow-core-serialization = { module = "io.arrow-kt:arrow-core-serialization", version.ref = "arrow" }
 arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrow" }
+clikt = { module = "com.github.ajalt.clikt:clikt", version.ref = "clikt" }
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
-kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinx-serialization" }
+kotlin-wrappers-node = { module = "org.jetbrains.kotlin-wrappers:kotlin-node", version.ref = "kotlin-wrappers-node" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines-core" }
+kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinx-serialization-core" }
 
 [plugins]
 compose = { id = "org.jetbrains.compose", version.ref = "compose-plugin" }

@@ -22,6 +22,3 @@ value class Hostname(
 
     override fun toString(): String = string
 }
-
-fun ByteArray.indicesOf(value: Byte): List<Int> =
-    toTypedArray().mapIndexedNotNull { index, byte -> index.takeIf { byte == value } }
