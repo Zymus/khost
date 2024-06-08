@@ -5,13 +5,6 @@ plugins {
 
 kotlin {
     js {
-        browser {
-            testTask {
-                useKarma {
-                    useFirefoxHeadless()
-                }
-            }
-        }
         nodejs()
     }
     jvm()
