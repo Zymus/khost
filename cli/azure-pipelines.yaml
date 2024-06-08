@@ -1,0 +1,18 @@
+trigger:
+  paths:
+    include: # Hmm, this repeats the list of CLI dependencies
+      - api
+      - cli
+      - serialization
+
+stages:
+  - stage: Build
+    displayName: Build CLI
+    jobs:
+      - job: Build
+        displayName: Build CLI
+        steps:
+          - task: Gradle@3
+            inputs:
+              workingDirectory: $(Build.SourcesDirectory)
+              tasks: :cli:build
