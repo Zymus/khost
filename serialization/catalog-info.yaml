@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: khost-serialization
+  description: Kotlinx Serialization for Khost
+spec:
+  type: library
+  owner: group:khost/maintainers
+  lifecycle: experimental

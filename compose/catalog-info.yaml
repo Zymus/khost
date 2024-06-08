@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: khost-compose
+  description: Compose Multiplatform interface for Khost
+spec:
+  type: executable
+  owner: group:khost/maintainers
+  lifecycle: experimental
