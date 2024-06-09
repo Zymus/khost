@@ -3,7 +3,18 @@ kind: Component
 metadata:
   name: khost-cli
   description: Command line interface for Khost
+  tags:
+    # Supported Platforms (dedupe this somewhere)
+    - nodejs
+    - jvm
+    - linuxX64
+    - macosArm64
+    - macosX64
+    - mingwX64
+  # TODO: Put versions for package references somewhere
 spec:
   type: executable
   owner: group:khost/maintainers
   lifecycle: experimental
+  consumesApis:
+    - api:khost-api
